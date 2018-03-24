@@ -2,6 +2,11 @@
   "name": "rn_kickstart",
   "version": "0.0.1",
   "private": true,
+  "rnpm": {
+    "assets": [
+      "./assets/fonts"
+    ]
+  },
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
@@ -12,8 +17,10 @@
     "flow": "flow check"
   },
   "dependencies": {
+    "@appandflow/touchable": "^2.0.0",
     "react": "^16.3.0-alpha.1",
-    "react-native": "0.54.2"
+    "react-native": "0.54.2",
+    "react-native-gesture-handler": "^1.0.0-alpha.41"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.3.15",
@@ -29,6 +36,7 @@
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-flowtype": "^2.46.1",
     "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jest": "^21.15.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0",
     "eslint-plugin-react-native": "^3.2.1",
@@ -40,6 +48,9 @@
     "react-test-renderer": "^16.3.0-alpha.1"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "setupFiles": [
+      "./jest/setup.js"
+    ]
   }
 }
