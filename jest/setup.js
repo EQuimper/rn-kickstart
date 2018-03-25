@@ -17,6 +17,7 @@ configure({
 jest.mock('react-native-device-info', () => ({
   isEmulator: jest.fn(),
   getBuildNumber: jest.fn(),
+  getApplicationName: jest.fn(),
 }));
 
 jest.mock('@appandflow/touchable', () => {

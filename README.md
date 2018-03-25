@@ -18,6 +18,7 @@ A boilerplate to kickstart your react-native project the right way.
 - [react-native-device-info](https://github.com/rebeccahughes/react-native-device-info)
 - [react-native-touchable](https://github.com/AppAndFlow/react-native-touchable)
 - [react-native-gesture-handler](https://github.com/kmagiera/react-native-gesture-handler)
+- [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons)
 - [color](https://github.com/Qix-/color)
 - [idx](https://github.com/facebookincubator/idx)
 - [invariant](https://github.com/zertosh/invariant)

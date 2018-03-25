@@ -33,29 +33,29 @@ export const Callout = ({ style, ...rest }: P) => (
 const styles = StyleSheet.create({
   title: {
     fontSize: 28,
-    fontWeight: '600',
     color: theme.colors.text.dark,
     letterSpacing: 0.35,
+    fontFamily: theme.fonts.bold
   },
   subtitle: {
     fontSize: 24,
-    fontWeight: '600',
     color: theme.colors.text.dark,
     letterSpacing: 0.35,
+    fontFamily: theme.fonts.bold
   },
   headLine: {
     fontSize: 22,
-    fontWeight: '400',
     color: theme.colors.text.dark,
+    fontFamily: theme.fonts.semiBold
   },
   body: {
     fontSize: 14,
-    fontWeight: '300',
     color: theme.colors.text.dark,
+    fontFamily: theme.fonts.normal
   },
   callout: {
     fontSize: 16,
-    fontWeight: '400',
     color: theme.colors.text.dark,
+    fontFamily: theme.fonts.normal
   },
 });

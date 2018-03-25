@@ -3,7 +3,7 @@
 import React, { PureComponent } from 'react';
 import { Text } from 'react-native';
 
-import { CenterView } from './commons';
+import { CenterView, Title } from './commons';
 
 import { buildNumber, isEmulator, appName } from './utils';
 
@@ -16,7 +16,7 @@ class App extends PureComponent<P, S> {
   render() {
     return (
       <CenterView>
-        <Text>App Name: {appName}</Text>
+        <Title>App Name: {appName}</Title>
         <Text>Build Number: {buildNumber}</Text>
         <Text>Emulator?: {String(isEmulator)}</Text>
       </CenterView>
