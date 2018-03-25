@@ -11,7 +11,6 @@ import { theme } from '../../../utils';
 import { Callout } from '../../Typographie';
 
 type P = {
-  // Style for button
   style?: StyleObj,
   textStyle?: StyleObj,
   onPress: () => void,
@@ -23,7 +22,7 @@ type P = {
   loadingColor?: string,
 };
 
-function Button({
+function RoundedButton({
   style,
   onPress,
   children,
@@ -39,7 +38,7 @@ function Button({
 
   invariant(
     !colorNotProvided,
-    'Button: You must provided at least one of variant or color',
+    'RoundedButton: You must provided at least one of variant or color',
   );
 
   const isDisabled = disabled || loading;
@@ -69,7 +68,7 @@ const styles = StyleSheet.create({
   root: {
     height: 40,
     width: '100%',
-    borderRadius: theme.metrics.radius.tinySize,
+    borderRadius: theme.metrics.radius.smallSize,
     backgroundColor: 'red',
     alignItems: 'center',
     justifyContent: 'center',
@@ -80,4 +79,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Button;
+export default RoundedButton;

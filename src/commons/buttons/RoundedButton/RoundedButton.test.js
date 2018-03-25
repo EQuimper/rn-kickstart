@@ -5,9 +5,9 @@ import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
 import { ActivityIndicator } from 'react-native';
 
-import Button from './Button';
+import RoundedButton from './RoundedButton';
 
-describe('<Button />', () => {
+describe('<RoundedButton />', () => {
   it('should renders correctly', () => {
     const props = {
       onPress: () => null,
@@ -15,7 +15,7 @@ describe('<Button />', () => {
     };
 
     const tree = renderer
-      .create(<Button {...props}>Hello World</Button>)
+      .create(<RoundedButton {...props}>Hello World</RoundedButton>)
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
@@ -29,7 +29,7 @@ describe('<Button />', () => {
       variant: 'primary',
     };
 
-    const button = shallow(<Button {...props}>{text}</Button>);
+    const button = shallow(<RoundedButton {...props}>{text}</RoundedButton>);
 
     button.simulate('press');
     expect(spy).toHaveBeenCalled();
@@ -43,7 +43,7 @@ describe('<Button />', () => {
       variant: 'primary',
     };
 
-    const button = shallow(<Button {...props}>{text}</Button>);
+    const button = shallow(<RoundedButton {...props}>{text}</RoundedButton>);
     expect(button.contains(text)).toBeTruthy();
   });
 
@@ -59,7 +59,9 @@ describe('<Button />', () => {
       },
     };
 
-    const button = renderer.create(<Button {...props}>{text}</Button>).toJSON();
+    const button = renderer
+      .create(<RoundedButton {...props}>{text}</RoundedButton>)
+      .toJSON();
     expect(button).toMatchSnapshot();
   });
 
@@ -73,9 +75,9 @@ describe('<Button />', () => {
 
     const buttonDisabled = renderer
       .create(
-        <Button {...props} disabled>
+        <RoundedButton {...props} disabled>
           {text}
-        </Button>,
+        </RoundedButton>,
       )
       .toJSON();
     expect(buttonDisabled).toMatchSnapshot();
@@ -90,9 +92,9 @@ describe('<Button />', () => {
     };
 
     const buttonLoading = shallow(
-      <Button {...props} loading>
+      <RoundedButton {...props} loading>
         {text}
-      </Button>,
+      </RoundedButton>,
     );
 
     expect(buttonLoading.find(ActivityIndicator)).toHaveLength(1);
@@ -106,10 +108,11 @@ describe('<Button />', () => {
       onPress: () => null,
     };
 
-    const buttonWithError = () => shallow(<Button {...props}>{text}</Button>);
+    const buttonWithError = () =>
+      shallow(<RoundedButton {...props}>{text}</RoundedButton>);
 
     expect(buttonWithError).toThrow(
-      'Button: You must provided at least one of variant or color',
+      'RoundedButton: You must provided at least one of variant or color',
     );
     expect(buttonWithError).toThrowErrorMatchingSnapshot();
   });
