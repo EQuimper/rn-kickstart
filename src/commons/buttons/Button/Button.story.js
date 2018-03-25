@@ -12,5 +12,22 @@ storiesOf('Button', module)
     <CenterView style={{ paddingHorizontal: 20 }}>{getStory()}</CenterView>
   ))
   .add('Default', () => (
-    <Button onPress={action('clicked-text')}>Hello World</Button>
+    <Button variant="primary" onPress={action('clicked-text')}>
+      Hello World
+    </Button>
+  ))
+  .add('Disabled', () => (
+    <Button disabled variant="primary" onPress={action('clicked-text')}>
+      Hello World
+    </Button>
+  ))
+  .add('Loading', () => (
+    <Button
+      loadingColor="#fff"
+      loading
+      variant="primary"
+      onPress={action('clicked-text')}
+    >
+      Hello World
+    </Button>
   ));

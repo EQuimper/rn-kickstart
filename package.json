@@ -3,9 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "rnpm": {
-    "assets": [
-      "./assets/fonts"
-    ]
+    "assets": ["./assets/fonts"]
   },
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
@@ -18,6 +16,9 @@
   },
   "dependencies": {
     "@appandflow/touchable": "^2.0.0",
+    "color": "^3.0.0",
+    "idx": "^2.2.0",
+    "invariant": "^2.2.4",
     "react": "^16.3.0-alpha.1",
     "react-native": "0.54.2",
     "react-native-gesture-handler": "^1.0.0-alpha.41"
@@ -31,6 +32,9 @@
     "babel-eslint": "^8.2.2",
     "babel-jest": "22.4.3",
     "babel-preset-react-native": "4.0.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.3",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.9.0",
@@ -45,12 +49,11 @@
     "prettier": "^1.11.1",
     "prop-types": "^15.6.1",
     "react-dom": "^16.3.0-alpha.1",
-    "react-test-renderer": "^16.3.0-alpha.1"
+    "react-test-renderer": "^16.2.0"
   },
   "jest": {
     "preset": "react-native",
-    "setupFiles": [
-      "./jest/setup.js"
-    ]
+    "setupFiles": ["./jest/setup.js"],
+    "snapshotSerializers": ["enzyme-to-json/serializer"]
   }
 }

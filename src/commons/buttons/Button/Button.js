@@ -1,24 +1,62 @@
 // @flow
 
 import * as React from 'react';
-import { Text, StyleSheet } from 'react-native';
+import { Text, StyleSheet, ActivityIndicator } from 'react-native';
 import Touchable from '@appandflow/touchable';
 import { type StyleObj } from 'react-native/Libraries/StyleSheet/StyleSheetTypes';
+import Color from 'color';
+import invariant from 'invariant';
+
+import { theme } from '../../../utils';
 
 type P = {
   style?: StyleObj,
   onPress: () => void,
   children: React.Node,
+  disabled?: boolean,
+  loading?: boolean,
+  variant?: 'primary' | 'secondary',
+  color?: string,
+  loadingColor?: string,
 };
 
-function Button({ style, onPress, children }: P) {
+function Button({
+  style,
+  onPress,
+  children,
+  disabled = false,
+  loading = false,
+  variant,
+  color,
+  loadingColor,
+  ...rest
+}: P) {
+  const colorNotProvided = !color && !variant;
+
+  invariant(
+    !colorNotProvided,
+    'Button: You must provided at least one of variant or color',
+  );
+
+  const isDisabled = disabled || loading;
+
+  const _color = Color(variant ? theme.colors[variant] : color);
+
+  const backgroundColor = isDisabled ? _color.lighten(0.5) : _color;
+
   return (
     <Touchable
-      style={[styles.root, style]}
+      {...rest}
+      style={[styles.root, { backgroundColor }, style]}
       onPress={onPress}
       feedback="opacity"
+      disabled={isDisabled}
     >
-      <Text>{children}</Text>
+      {loading ? (
+        <ActivityIndicator color={loadingColor} size="small" />
+      ) : (
+        <Text>{children}</Text>
+      )}
     </Touchable>
   );
 }
@@ -27,11 +65,11 @@ const styles = StyleSheet.create({
   root: {
     height: 40,
     width: '100%',
-    borderRadius: 6,
+    borderRadius: theme.metrics.radius.tinySize,
     backgroundColor: 'red',
     alignItems: 'center',
     justifyContent: 'center',
-    elevation: 2
+    ...theme.metrics.shadow.basic,
   },
 });
 
