@@ -1,0 +1,6 @@
+// @flow
+
+/**
+ * APPLICATION CONSTANTS
+ *
+ */

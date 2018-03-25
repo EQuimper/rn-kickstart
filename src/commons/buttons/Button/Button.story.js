@@ -1,23 +1,16 @@
 // @flow
 
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
 import { storiesOf } from '@storybook/react-native';
 import { action } from '@storybook/addon-actions';
 
+import { CenterView } from '../../';
 import Button from './Button';
 
-const styles = StyleSheet.create({
-  root: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    paddingHorizontal: 20
-  },
-});
-
-storiesOf('Button', module).add('Default', () => (
-  <View style={styles.root}>
+storiesOf('Button', module)
+  .addDecorator(getStory => (
+    <CenterView style={{ paddingHorizontal: 20 }}>{getStory()}</CenterView>
+  ))
+  .add('Default', () => (
     <Button onPress={action('clicked-text')}>Hello World</Button>
-  </View>
-));
+  ));

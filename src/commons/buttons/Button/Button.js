@@ -3,9 +3,10 @@
 import * as React from 'react';
 import { Text, StyleSheet } from 'react-native';
 import Touchable from '@appandflow/touchable';
+import { type StyleObj } from 'react-native/Libraries/StyleSheet/StyleSheetTypes';
 
 type P = {
-  style?: any,
+  style?: StyleObj,
   onPress: () => void,
   children: React.Node,
 };
@@ -29,7 +30,8 @@ const styles = StyleSheet.create({
     borderRadius: 6,
     backgroundColor: 'red',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    elevation: 2
   },
 });
 
