@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "rnpm": {
-    "assets": ["./assets/fonts"]
+    "assets": [
+      "./assets/fonts"
+    ]
   },
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
@@ -21,6 +23,7 @@
     "invariant": "^2.2.4",
     "react": "^16.3.0-alpha.1",
     "react-native": "0.54.2",
+    "react-native-device-info": "^0.21.2",
     "react-native-gesture-handler": "^1.0.0-alpha.41"
   },
   "devDependencies": {
@@ -53,7 +56,11 @@
   },
   "jest": {
     "preset": "react-native",
-    "setupFiles": ["./jest/setup.js"],
-    "snapshotSerializers": ["enzyme-to-json/serializer"]
+    "setupFiles": [
+      "./jest/setup.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   }
 }

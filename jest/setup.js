@@ -8,6 +8,17 @@ configure({
   adapter: new Adapter(),
 });
 
+/**
+|--------------------------------------------------
+| MOCKING LIBRARY
+|--------------------------------------------------
+*/
+
+jest.mock('react-native-device-info', () => ({
+  isEmulator: jest.fn(),
+  getBuildNumber: jest.fn(),
+}));
+
 jest.mock('@appandflow/touchable', () => {
   const mockComponent = require('react-native/jest/mockComponent');
 

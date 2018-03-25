@@ -1,8 +1,11 @@
 // @flow
 
 import React, { PureComponent } from 'react';
+import { Text } from 'react-native';
 
-import { View, Text } from 'react-native';
+import { CenterView } from './commons';
+
+import { buildNumber, isEmulator, appName } from './utils';
 
 type P = {};
 
@@ -12,9 +15,11 @@ class App extends PureComponent<P, S> {
   state = {};
   render() {
     return (
-      <View>
-        <Text>Hello World</Text>
-      </View>
+      <CenterView>
+        <Text>App Name: {appName}</Text>
+        <Text>Build Number: {buildNumber}</Text>
+        <Text>Emulator?: {String(isEmulator)}</Text>
+      </CenterView>
     );
   }
 }
