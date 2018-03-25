@@ -1,78 +1,59 @@
 // @flow
 
 import React from 'react';
-import { Text as RnText, StyleSheet, TextProperties } from 'react-native';
+import { Text as RnText, StyleSheet } from 'react-native';
 import { type StyleObj } from 'react-native/Libraries/StyleSheet/StyleSheetTypes';
 
 import { theme } from '../../utils';
 
 type P = {
   style?: StyleObj,
-  ...$Exact<TextProperties>
 };
 
-export const H1 = ({ style, ...rest }: P) => (
-  <RnText style={[styles.h1, style]} {...rest} />
+export const Title = ({ style, ...rest }: P) => (
+  <RnText style={[styles.title, style]} {...rest} />
 );
 
-export const H2 = ({ style, ...rest }: P) => (
-  <RnText style={[styles.h2, style]} {...rest} />
+export const SubTitle = ({ style, ...rest }: P) => (
+  <RnText style={[styles.subtitle, style]} {...rest} />
 );
 
-export const H3 = ({ style, ...rest }: P) => (
-  <RnText style={[styles.h3, style]} {...rest} />
+export const HeadLine = ({ style, ...rest }: P) => (
+  <RnText style={[styles.headLine, style]} {...rest} />
 );
 
-export const H4 = ({ style, ...rest }: P) => (
-  <RnText style={[styles.h4, style]} {...rest} />
+export const Body = ({ style, ...rest }: P) => (
+  <RnText style={[styles.body, style]} {...rest} />
 );
 
-export const H5 = ({ style, ...rest }: P) => (
-  <RnText style={[styles.h5, style]} {...rest} />
-);
-
-export const PText = ({ style, ...rest }: P) => (
-  <RnText style={[styles.pText, style]} {...rest} />
-);
-
-export const Text = ({ style, ...rest }: P) => (
-  <RnText style={[styles.text, style]} {...rest} />
+export const Callout = ({ style, ...rest }: P) => (
+  <RnText style={[styles.callout, style]} {...rest} />
 );
 
 const styles = StyleSheet.create({
-  h1: {
+  title: {
     fontSize: 28,
     fontWeight: '600',
     color: theme.colors.text.dark,
     letterSpacing: 0.35,
   },
-  h2: {
+  subtitle: {
     fontSize: 24,
     fontWeight: '600',
     color: theme.colors.text.dark,
     letterSpacing: 0.35,
   },
-  h3: {
+  headLine: {
     fontSize: 22,
     fontWeight: '400',
     color: theme.colors.text.dark,
   },
-  h4: {
-    fontSize: 20,
-    fontWeight: '400',
-    color: theme.colors.text.dark,
-  },
-  h5: {
-    fontSize: 18,
-    fontWeight: '400',
-    color: theme.colors.text.dark,
-  },
-  pText: {
+  body: {
     fontSize: 14,
     fontWeight: '300',
     color: theme.colors.text.dark,
   },
-  text: {
+  callout: {
     fontSize: 16,
     fontWeight: '400',
     color: theme.colors.text.dark,

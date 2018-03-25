@@ -4,60 +4,34 @@ import React from 'react';
 import { storiesOf } from '@storybook/react-native';
 
 import { CenterView } from '../';
-import { H1, H2, H3, H4, H5, PText, Text } from './Typographie'
+import { Title, SubTitle, Callout, HeadLine, Body } from './Typographie';
 
-storiesOf('H1', module)
+storiesOf('Title', module)
   .addDecorator(getStory => (
     <CenterView style={{ paddingHorizontal: 20 }}>{getStory()}</CenterView>
   ))
-  .add('Default', () => (
-    <H1 yo="false">Hello World</H1>
-  ));
+  .add('Default', () => <Title>Hello World</Title>);
 
-storiesOf('H2', module)
+storiesOf('SubTitle', module)
   .addDecorator(getStory => (
     <CenterView style={{ paddingHorizontal: 20 }}>{getStory()}</CenterView>
   ))
-  .add('Default', () => (
-    <H2>Hello World</H2>
-  ));
+  .add('Default', () => <SubTitle>Hello World</SubTitle>);
 
-storiesOf('H3', module)
+storiesOf('Callout', module)
   .addDecorator(getStory => (
     <CenterView style={{ paddingHorizontal: 20 }}>{getStory()}</CenterView>
   ))
-  .add('Default', () => (
-    <H3>Hello World</H3>
-  ));
+  .add('Default', () => <Callout>Hello World</Callout>);
 
-storiesOf('H4', module)
+storiesOf('HeadLine', module)
   .addDecorator(getStory => (
     <CenterView style={{ paddingHorizontal: 20 }}>{getStory()}</CenterView>
   ))
-  .add('Default', () => (
-    <H4>Hello World</H4>
-  ));
+  .add('Default', () => <HeadLine>Hello World</HeadLine>);
 
-storiesOf('H5', module)
+storiesOf('Body', module)
   .addDecorator(getStory => (
     <CenterView style={{ paddingHorizontal: 20 }}>{getStory()}</CenterView>
   ))
-  .add('Default', () => (
-    <H5>Hello World</H5>
-  ));
-
-storiesOf('PText', module)
-  .addDecorator(getStory => (
-    <CenterView style={{ paddingHorizontal: 20 }}>{getStory()}</CenterView>
-  ))
-  .add('Default', () => (
-    <PText>Hello World</PText>
-  ));
-
-storiesOf('Text', module)
-  .addDecorator(getStory => (
-    <CenterView style={{ paddingHorizontal: 20 }}>{getStory()}</CenterView>
-  ))
-  .add('Default', () => (
-    <Text>Hello World</Text>
-  ));
+  .add('Default', () => <Body>Hello World</Body>);
