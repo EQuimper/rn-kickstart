@@ -10,7 +10,7 @@ import RoundedButton from './RoundedButton';
 describe('<RoundedButton />', () => {
   it('should renders correctly', () => {
     const props = {
-      onPress: () => null,
+      onPress: jest.fn(),
       variant: 'primary',
     };
 
@@ -39,7 +39,7 @@ describe('<RoundedButton />', () => {
     const text = 'Hello World';
 
     const props = {
-      onPress: () => null,
+      onPress: jest.fn(),
       variant: 'primary',
     };
 
@@ -51,7 +51,7 @@ describe('<RoundedButton />', () => {
     const text = 'Hello World';
 
     const props = {
-      onPress: () => null,
+      onPress: jest.fn(),
       variant: 'primary',
       textStyle: {
         color: 'red',
@@ -69,7 +69,7 @@ describe('<RoundedButton />', () => {
     const text = 'Hello World';
 
     const props = {
-      onPress: () => null,
+      onPress: jest.fn(),
       variant: 'primary',
     };
 
@@ -87,7 +87,7 @@ describe('<RoundedButton />', () => {
     const text = 'Hello World';
 
     const props = {
-      onPress: () => null,
+      onPress: jest.fn(),
       variant: 'primary',
     };
 
@@ -105,7 +105,7 @@ describe('<RoundedButton />', () => {
     const text = 'Hello World';
 
     const props = {
-      onPress: () => null,
+      onPress: jest.fn(),
     };
 
     const buttonWithError = () =>

@@ -5,7 +5,7 @@ exports[`<Button /> should be able to change textStyle 1`] = `
   activeOpacity={0.2}
   disabled={false}
   feedback="opacity"
-  onPress={[Function]}
+  onPress={[MockFunction]}
   style={
     Array [
       Object {
@@ -46,7 +46,7 @@ exports[`<Button /> should be able to change textStyle 1`] = `
     style={
       Array [
         Object {
-          "color": "#000",
+          "color": "#111",
           "fontFamily": "Montserrat-Regular",
           "fontSize": 16,
         },
@@ -72,7 +72,7 @@ exports[`<Button /> should be in disabled mode if disabled true 1`] = `
   activeOpacity={0.2}
   disabled={true}
   feedback="opacity"
-  onPress={[Function]}
+  onPress={[MockFunction]}
   style={
     Array [
       Object {
@@ -113,7 +113,7 @@ exports[`<Button /> should be in disabled mode if disabled true 1`] = `
     style={
       Array [
         Object {
-          "color": "#000",
+          "color": "#111",
           "fontFamily": "Montserrat-Regular",
           "fontSize": 16,
         },
@@ -136,7 +136,7 @@ exports[`<Button /> should be in disabled mode if loading true and show Activity
   activeOpacity={0.2}
   disabled={true}
   feedback="opacity"
-  onPress={[Function]}
+  onPress={[MockFunction]}
   style={
     Array [
       Object {
@@ -184,7 +184,7 @@ exports[`<Button /> should renders correctly 1`] = `
   activeOpacity={0.2}
   disabled={false}
   feedback="opacity"
-  onPress={[Function]}
+  onPress={[MockFunction]}
   style={
     Array [
       Object {
@@ -225,7 +225,7 @@ exports[`<Button /> should renders correctly 1`] = `
     style={
       Array [
         Object {
-          "color": "#000",
+          "color": "#111",
           "fontFamily": "Montserrat-Regular",
           "fontSize": 16,
         },

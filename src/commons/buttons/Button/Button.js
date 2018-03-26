@@ -10,7 +10,7 @@ import invariant from 'invariant';
 import { theme } from '../../../utils';
 import { Callout } from '../../Typographie';
 
-type P = {
+type P = {|
   // Style for button
   style?: StyleObj,
   textStyle?: StyleObj,
@@ -21,7 +21,7 @@ type P = {
   variant?: 'primary' | 'secondary',
   color?: string,
   loadingColor?: string,
-};
+|};
 
 function Button({
   style,

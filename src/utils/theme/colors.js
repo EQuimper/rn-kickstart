@@ -9,7 +9,7 @@ export const colors = {
   white: '#fff',
   transparent: 'rgba(0, 0, 0, 0)',
   text: {
-    dark: '#000',
+    dark: '#111',
     light: '#555',
   }
 };

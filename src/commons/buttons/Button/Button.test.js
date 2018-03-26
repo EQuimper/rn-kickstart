@@ -10,7 +10,7 @@ import Button from './Button';
 describe('<Button />', () => {
   it('should renders correctly', () => {
     const props = {
-      onPress: () => null,
+      onPress: jest.fn(),
       variant: 'primary',
     };
 
@@ -39,7 +39,7 @@ describe('<Button />', () => {
     const text = 'Hello World';
 
     const props = {
-      onPress: () => null,
+      onPress: jest.fn(),
       variant: 'primary',
     };
 
@@ -51,7 +51,7 @@ describe('<Button />', () => {
     const text = 'Hello World';
 
     const props = {
-      onPress: () => null,
+      onPress: jest.fn(),
       variant: 'primary',
       textStyle: {
         color: 'red',
@@ -67,7 +67,7 @@ describe('<Button />', () => {
     const text = 'Hello World';
 
     const props = {
-      onPress: () => null,
+      onPress: jest.fn(),
       variant: 'primary',
     };
 
@@ -85,7 +85,7 @@ describe('<Button />', () => {
     const text = 'Hello World';
 
     const props = {
-      onPress: () => null,
+      onPress: jest.fn(),
       variant: 'primary',
     };
 
@@ -103,7 +103,7 @@ describe('<Button />', () => {
     const text = 'Hello World';
 
     const props = {
-      onPress: () => null,
+      onPress: jest.fn(),
     };
 
     const buttonWithError = () => shallow(<Button {...props}>{text}</Button>);

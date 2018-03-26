@@ -10,7 +10,7 @@ import invariant from 'invariant';
 import { theme } from '../../../utils';
 import { Callout } from '../../Typographie';
 
-type P = {
+type P = {|
   style?: StyleObj,
   textStyle?: StyleObj,
   onPress: () => void,
@@ -20,7 +20,7 @@ type P = {
   variant?: 'primary' | 'secondary',
   color?: string,
   loadingColor?: string,
-};
+|};
 
 function RoundedButton({
   style,
