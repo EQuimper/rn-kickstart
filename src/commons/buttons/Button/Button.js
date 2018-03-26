@@ -11,7 +11,6 @@ import { theme } from '../../../utils';
 import { Callout } from '../../Typographie';
 
 type P = {|
-  // Style for button
   style?: StyleObj,
   textStyle?: StyleObj,
   onPress: () => void,

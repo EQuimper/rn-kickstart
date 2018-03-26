@@ -1,11 +1,15 @@
 // @flow
 
 import React, { PureComponent } from 'react';
-import { Text } from 'react-native';
+import { YellowBox } from 'react-native';
 
-import { CenterView, Title } from './commons';
+import Navigator from './screens/Navigator';
 
-import { buildNumber, isEmulator, appName } from './utils';
+YellowBox.ignoreWarnings([
+  'Warning: componentWillMount is deprecated',
+  'Warning: componentWillReceiveProps is deprecated',
+  'Module RCTImageLoader requires main queue',
+]);
 
 type P = {};
 
@@ -14,13 +18,7 @@ type S = {};
 class App extends PureComponent<P, S> {
   state = {};
   render() {
-    return (
-      <CenterView>
-        <Title>App Name: {appName}</Title>
-        <Text>Build Number: {buildNumber}</Text>
-        <Text>Emulator?: {String(isEmulator)}</Text>
-      </CenterView>
-    );
+    return <Navigator />;
   }
 }
 
