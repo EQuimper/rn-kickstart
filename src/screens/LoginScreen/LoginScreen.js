@@ -1,12 +1,12 @@
 // @flow
 
 import React, { PureComponent, Fragment } from 'react';
-import { NavigationScreenProp } from 'react-navigation';
+import { type NavigationScreenProp } from 'react-navigation';
 
 import { LoginContainer } from '../../containers';
 
 type P = {|
-  navigation: NavigationScreenProp,
+  navigation: NavigationScreenProp<*>,
 |};
 
 type S = {};

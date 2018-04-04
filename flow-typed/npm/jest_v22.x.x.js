@@ -1,5 +1,5 @@
-// flow-typed signature: ebbcd423b1fcd29d6804fca91bb68879
-// flow-typed version: 7b9f6d2713/jest_v22.x.x/flow_>=v0.39.x
+// flow-typed signature: ce84f78f95836afb1ef53040f4906859
+// flow-typed version: ab9a73e70c/jest_v22.x.x/flow_>=v0.39.x
 
 type JestMockFn<TArguments: $ReadOnlyArray<*>, TReturn> = {
   (...args: TArguments): TReturn,
@@ -55,6 +55,11 @@ type JestMockFn<TArguments: $ReadOnlyArray<*>, TReturn> = {
   mockImplementationOnce(
     fn: (...args: TArguments) => TReturn
   ): JestMockFn<TArguments, TReturn>,
+  /**
+   * Accepts a string to use in test result output in place of "jest.fn()" to
+   * indicate which mock function is being referenced.
+   */
+  mockName(name: string): JestMockFn<TArguments, TReturn>,
   /**
    * Just a simple sugar function for returning `this`
    */
@@ -398,6 +403,13 @@ type JestObjectType = {
   /**
    * Executes only the macro task queue (i.e. all tasks queued by setTimeout()
    * or setInterval() and setImmediate()).
+   */
+  advanceTimersByTime(msToRun: number): void,
+  /**
+   * Executes only the macro task queue (i.e. all tasks queued by setTimeout()
+   * or setInterval() and setImmediate()).
+   *
+   * Renamed to `advanceTimersByTime`.
    */
   runTimersToTime(msToRun: number): void,
   /**

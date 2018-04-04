@@ -1,4 +1,4 @@
-// flow-typed signature: 68ed9acb39e802ee403eddf8c7eb3d72
+// flow-typed signature: 8e2997e9f6c1be5b3298e011eb4b154d
 // flow-typed version: <<STUB>>/@storybook/react-native_v^3.3.15/flow_v0.65.0
 
 /**
@@ -79,14 +79,6 @@ declare module '@storybook/react-native/dist/preview/components/StoryView/style'
 }
 
 declare module '@storybook/react-native/dist/preview/index' {
-  declare module.exports: any;
-}
-
-declare module '@storybook/react-native/dist/preview/story_kind' {
-  declare module.exports: any;
-}
-
-declare module '@storybook/react-native/dist/preview/story_store' {
   declare module.exports: any;
 }
 
@@ -186,14 +178,6 @@ declare module '@storybook/react-native/src/preview/index' {
   declare module.exports: any;
 }
 
-declare module '@storybook/react-native/src/preview/story_kind' {
-  declare module.exports: any;
-}
-
-declare module '@storybook/react-native/src/preview/story_store' {
-  declare module.exports: any;
-}
-
 declare module '@storybook/react-native/src/server/addons' {
   declare module.exports: any;
 }
@@ -280,12 +264,6 @@ declare module '@storybook/react-native/dist/preview/components/StoryView/style.
 declare module '@storybook/react-native/dist/preview/index.js' {
   declare module.exports: $Exports<'@storybook/react-native/dist/preview/index'>;
 }
-declare module '@storybook/react-native/dist/preview/story_kind.js' {
-  declare module.exports: $Exports<'@storybook/react-native/dist/preview/story_kind'>;
-}
-declare module '@storybook/react-native/dist/preview/story_store.js' {
-  declare module.exports: $Exports<'@storybook/react-native/dist/preview/story_store'>;
-}
 declare module '@storybook/react-native/dist/server/addons.js' {
   declare module.exports: $Exports<'@storybook/react-native/dist/server/addons'>;
 }
@@ -357,12 +335,6 @@ declare module '@storybook/react-native/src/preview/components/StoryView/style.j
 }
 declare module '@storybook/react-native/src/preview/index.js' {
   declare module.exports: $Exports<'@storybook/react-native/src/preview/index'>;
-}
-declare module '@storybook/react-native/src/preview/story_kind.js' {
-  declare module.exports: $Exports<'@storybook/react-native/src/preview/story_kind'>;
-}
-declare module '@storybook/react-native/src/preview/story_store.js' {
-  declare module.exports: $Exports<'@storybook/react-native/src/preview/story_store'>;
 }
 declare module '@storybook/react-native/src/server/addons.js' {
   declare module.exports: $Exports<'@storybook/react-native/src/server/addons'>;
