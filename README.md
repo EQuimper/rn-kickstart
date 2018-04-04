@@ -23,3 +23,4 @@ A boilerplate to kickstart your react-native project the right way.
 * [idx](https://github.com/facebookincubator/idx)
 * [invariant](https://github.com/zertosh/invariant)
 * [formik](https://github.com/jaredpalmer/formik)
+* [react-native-paper](https://github.com/callstack/react-native-paper)
