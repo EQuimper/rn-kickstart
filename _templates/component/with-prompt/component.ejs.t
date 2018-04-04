@@ -1,5 +1,5 @@
 ---
-to: src/components/<%= componentName %>/<%= componentName %>.js
+to: src/components/<%= h.capitalize(componentName) %>/<%= h.capitalize(componentName) %>.js
 ---
 // @flow
 
@@ -10,7 +10,7 @@ type P = {};
 
 type S = {}
 
-class <%= componentName %> extends Component<P, S> {
+class <%= h.capitalize(componentName) %> extends Component<P, S> {
   state = {}
 
   render() {
@@ -24,4 +24,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default <%= componentName %>;
+export default <%= h.capitalize(componentName) %>;

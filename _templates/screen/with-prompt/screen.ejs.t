@@ -1,5 +1,5 @@
 ---
-to: src/screens/<%= screenName %>Screen/<%= screenName %>Screen.js
+to: src/screens/<%= h.capitalize(screenName) %>Screen/<%= h.capitalize(screenName) %>Screen.js
 ---
 // @flow
 
@@ -13,9 +13,9 @@ type P = {
 
 type S = {};
 
-class <%= screenName %>Screen extends Component<P, S> {
+class <%= h.capitalize(screenName) %>Screen extends Component<P, S> {
   static navigationOptions = {
-    title: '<%= screenName %>'
+    title: '<%= h.capitalize(screenName) %>'
   }
 
   state = {}
@@ -31,4 +31,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default <%= screenName %>Screen;
+export default <%= h.capitalize(screenName) %>Screen;
