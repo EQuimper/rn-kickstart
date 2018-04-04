@@ -6,11 +6,11 @@ A boilerplate to kickstart your react-native project the right way.
 
 I put some generator with [hygen](https://github.com/jondot/hygen) that let you scaffold project quicker.
 
-- yarn gen:component -> create a component,story,test and inject it
-- yarn gen:purecomponent -> create a purecomponent,story,test and inject it
-- yarn gen:screen -> create a screen,test
-- yarn gen:common --componentStyle sl -> create a stateless component,story,test and inject it
-- yarn gen:common --componentStyle sf -> create a stateful component,story,test and inject it
+- **yarn gen:component** -> create a component,story,test and inject it
+- **yarn gen:purecomponent** -> create a purecomponent,story,test and inject it
+- **yarn gen:screen** -> create a screen,test
+- **yarn gen:common --componentStyle sl** -> create a stateless component,story,test and inject it
+- **yarn gen:common --componentStyle sf** -> create a stateful component,story,test and inject it
 
 ## TODO
 
