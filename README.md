@@ -24,3 +24,5 @@ A boilerplate to kickstart your react-native project the right way.
 * [invariant](https://github.com/zertosh/invariant)
 * [formik](https://github.com/jaredpalmer/formik)
 * [react-native-paper](https://github.com/callstack/react-native-paper)
+* [hygen](https://github.com/jondot/hygen)
+* [haul](https://github.com/callstack/haul)

@@ -18,7 +18,8 @@
     "haul": "haul",
     "gen:component": "hygen component with-prompt",
     "gen:purecomponent": "hygen purecomponent with-prompt",
-    "gen:screen": "hygen screen with-prompt"
+    "gen:screen": "hygen screen with-prompt",
+    "gen:common": "hygen common with-prompt"
   },
   "dependencies": {
     "@appandflow/touchable": "^2.0.0",

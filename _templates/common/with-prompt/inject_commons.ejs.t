@@ -1,6 +1,6 @@
 ---
 inject: true
-to: src/components/index.js
+to: src/commons/index.js
 skip_if: <%= h.capitalize(componentName) %>
 append: true
 ---
